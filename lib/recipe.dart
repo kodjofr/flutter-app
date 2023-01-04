@@ -10,7 +10,6 @@ class Recipe {
       this.servings,
       this.ingredients,
       );
-  // TODO : Add List<Recipe> here
 
   static List<Recipe> samples = [
     Recipe(

@@ -9,23 +9,20 @@ void main() {
 
 class RecipeApp extends StatelessWidget {
   const RecipeApp({super.key});
-  // 1
+
   @override
   Widget build(BuildContext context) {
-    //2
     final ThemeData theme = ThemeData();
-    //3
+
     return MaterialApp(
-      //4
       title: 'Recipes',
-      //5
       theme: theme.copyWith(
         colorScheme: theme.colorScheme.copyWith(
           primary: Colors.orange,
           secondary: Colors.black,
         ),
       ),
-      //6
+
       home: const MyHomePage(title: 'Recipes'),
     );
   }
@@ -67,7 +64,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     context, MaterialPageRoute(
                     builder: (context) {
                       
-                      // TODO : Replace return with RecipeDetail()
                       return RecipeDetail(recipe: Recipe.samples[index]);
                 },
                 ),
@@ -81,8 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
     ),
     );
 }
-// TODO : Add buildRecipeCard() here
-    
+
     Widget buildRecipeCard(Recipe recipe) {
     //1
       return Card(
